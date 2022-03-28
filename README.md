@@ -27,10 +27,10 @@ To get a local copy up and running follow these simple example steps.
 
 ## Setup
 
-- Clone this repository. 
+- Clone this repository.
 - Run ``npm i`` or ``yarn`` to install dependencies required to start the project
-- Using node v15.11.0 (npm v7.6.0) 
-- Run ``npm start`` 
+- Using node v15.11.0 (npm v7.6.0)
+- Run ``npm start``
 
 ## Run Tests
 
@@ -38,21 +38,19 @@ To get a local copy up and running follow these simple example steps.
 npm run lint
 ```
 
-## Author:
+## Authors
 
-👤 **Alexander odufuye**
+👤 **Moises Hernandez**
 
-[<code><img height="26" src="https://cdn.iconscout.com/icon/free/png-256/github-153-675523.png"></code>](https://github.com/alexander16108)
+- GitHub: [@Mhdez221993](https://github.com/Mhdez221993)
+- Twitter: [@MoisesH42060050](https://twitter.com/MoisesH42060050)
+- LinkedIn: [Moises Hernandez Coronado](https://www.linkedin.com/in/moises-hernandez-9bbb17145/)
 
+👤 **Alexander Odufuye**
 
-[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/sco/thumb/9/9f/Twitter_bird_logo_2012.svg/1200px-Twitter_bird_logo_2012.svg.png"></code>](https://linkedIn.com/codingrex)
+- GitHub: [@alexander16108](https://github.com/alexander16108)
+- LinkedIn: [alexander](https://www.linkedin.com/in/codingrex/)
 
-
-👤 **Moise Hernandez**
-
-[<code><img height="26" src="https://cdn.iconscout.com/icon/free/png-256/github-153-675523.png"></code>](https://github.com/mhdez6423)
-[<code><img height="26" src="https://upload.wikimedia.org/wikipedia/sco/thumb/9/9f/Twitter_bird_logo_2012.svg/1200px-Twitter_bird_logo_2012.svg.png"></code>](https://twitter.com/mhdez6423)
- 
 
 ## 🤝 Contributing
 Contributions, issues and feature requests are welcome!
@@ -64,7 +62,7 @@ Feel free to check the [issues page](https://github.com/alexander16108/comic-dan
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-Original design idea by Gregoire Vella on Behance. [Gregoire Vella on Behance]()
+- Original design idea by [Gregoire Vella](https://www.behance.net/muratk) on Behance.
 - Microverse
 - The Odin Project
 
