@@ -40,7 +40,7 @@ npm run lint
 
 ## Author:
 
-👤 **Moise Hernandez**
+👤 **Alexander odufuye**
 
 [<code><img height="26" src="https://cdn.iconscout.com/icon/free/png-256/github-153-675523.png"></code>](https://github.com/alexander16108)
 
@@ -64,7 +64,7 @@ Feel free to check the [issues page](https://github.com/alexander16108/comic-dan
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
+Original design idea by Gregoire Vella on Behance. [Gregoire Vella on Behance]()
 - Microverse
 - The Odin Project
 
