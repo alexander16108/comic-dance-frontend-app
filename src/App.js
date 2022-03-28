@@ -1,7 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NavBar from './components/navbar/NavBar';
+import Apartments from './pages/Apartments';
+import LeaseForm from './pages/LeaseForm';
+import MyLeases from './pages/MyLeases';
+import DeleteLeases from './pages/DeleteLeases';
 
 function App() {
   return (
