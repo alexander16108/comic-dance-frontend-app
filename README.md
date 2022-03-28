@@ -38,6 +38,12 @@ To get a local copy up and running follow these simple example steps.
 npm run lint
 ```
 
+## Check for linters errors and fix them
+```
+npx eslint . --fix
+npx stylelint "**/*.{css,scss}" --fix
+```
+
 ## Authors
 
 👤 **Moises Hernandez**
