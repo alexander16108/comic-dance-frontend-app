@@ -1,10 +1,5 @@
-import React from 'react';
+import React from "react";
 
-const DeleteClasses
- = () => (
-  <h1 className="random">DeleteClasses
-  </h1>
-);
+const DeleteClasses = () => <h1 className="random"> DeleteClasses </h1>;
 
-export default DeleteClasses
-;
+export default DeleteClasses;

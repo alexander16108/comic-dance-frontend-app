@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/navbar/NavBar';
 import DanceClasses from './pages/EnrolledClasses';
 import EnrollmentForm from './pages/EnrollmentForm';
-import EnrolledForm from './pages/EnrolledForm';
+import EnrolledForm from './pages/EnrolledClasses';
 import DeleteClasses from './pages/DeleteClasses';
 
 const App = () => (
