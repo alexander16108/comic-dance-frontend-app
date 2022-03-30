@@ -4,11 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+window.onbeforeunload = () => {
+  if (localStorage.getItem('someRandomVitalData')) {
+    const data = JSON.parse(localStorage.getItem('someRandomVitalData'));
+    const now = new Date().getTime();
+    data.timestamp = now;
+    localStorage.setItem('someRandomVitalData', JSON.stringify(data));
+  }
+};
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function
