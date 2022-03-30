@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NavBar from './components/navbar/NavBar';
+import DanceClasses from './pages/EnrolledClasses';
+import EnrollmentForm from './pages/EnrollmentForm';
+import EnrolledForm from './pages/EnrolledForm';
+import DeleteClasses from './pages/DeleteClasses';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <Router>
+    <NavBar />
+    <Routes>
+      <Route exact path="/" element={<DanceClasses />} />
+    </Routes>
+    <Routes>
+      <Route exact path="/lease_form" element={<EnrollmentForm />} />
+    </Routes>
+    <Routes>
+      <Route exact path="/my_leases" element={<EnrolledForm />} />
+    </Routes>
+    <Routes>
+      <Route exact path="/delete_leases" element={<DeleteClasses />} />
+    </Routes>
+  </Router>
+);
 
 export default App;
