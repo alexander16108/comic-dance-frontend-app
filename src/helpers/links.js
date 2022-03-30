@@ -7,15 +7,15 @@ const links = [
   },
   {
     id: 2,
-    path: '/enroll_form',
+    path: '/enrollment_form',
     text: 'Enrollment Form',
     name: 'enroll_form',
   },
   {
     id: 3,
-    path: '/my_leases',
-    text: 'MY LEASES',
-    name: 'my_leases',
+    path: '/my _classes',
+    text: 'My Classes',
+    name: 'my_classes',
   },
   {
     id: 4,
