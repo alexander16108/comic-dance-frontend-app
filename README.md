@@ -1,79 +1,70 @@
-# Comic Dance Hall
-This is an Dance hall webapp that allows a user to sign up, log in, and make leases on particular apartments. The user, apartments, and leases are stored in this API.
+# Getting Started with Create React App
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Built with
+## Available Scripts
 
-- HTML
-- CSS
-- React
-- Redux
-- JavaScript
-- VScode
-- Lots of love :heart:
+In the project directory, you can run:
 
+### `npm start`
 
-## Previews
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
+### `npm test`
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Live Demo
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Getting Started
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-To get a local copy up and running follow these simple example steps.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Setup
+### `npm run eject`
 
-- Clone this repository.
-- Run ``npm i`` or ``yarn`` to install dependencies required to start the project
-- Using node v15.11.0 (npm v7.6.0)
-- Run ``npm start``
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## Run Tests
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-```
-npm run lint
-```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## Check for linters errors and fix them
-```
-npx eslint . --fix
-npx stylelint "**/*.{css,scss}" --fix
-```
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Authors
+## Learn More
 
-👤 **Moises Hernandez**
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-- GitHub: [@Mhdez221993](https://github.com/Mhdez221993)
-- Twitter: [@MoisesH42060050](https://twitter.com/MoisesH42060050)
-- LinkedIn: [Moises Hernandez Coronado](https://www.linkedin.com/in/moises-hernandez-9bbb17145/)
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-👤 **Alexander Odufuye**
+### Code Splitting
 
-- GitHub: [@alexander16108](https://github.com/alexander16108)
-- LinkedIn: [alexander](https://www.linkedin.com/in/codingrex/)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
+### Analyzing the Bundle Size
 
-## 🤝 Contributing
-Contributions, issues and feature requests are welcome!
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-Feel free to check the [issues page](https://github.com/alexander16108/comic-dance-frontend-app/issues).
+### Making a Progressive Web App
 
-## Show your support
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-Give a ⭐️ if you like this project!
+### Advanced Configuration
 
-## Acknowledgments
-- Original design idea by [Gregoire Vella](https://www.behance.net/muratk) on Behance.
-- Microverse
-- The Odin Project
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-## 📝 MIT License
+### Deployment
 
-This project makes use of the MIT license.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-Just clone and then run npm install to make it work.
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
