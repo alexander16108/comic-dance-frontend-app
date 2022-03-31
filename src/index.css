@@ -39,6 +39,7 @@ body,
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 90vw;
   padding: 0 20px;
 }
 
@@ -58,9 +59,17 @@ body,
   opacity: 0.6;
 }
 
+h1 {
+  font-size: xx-large !important;
+  padding: 15px 0;
+}
+
 .enrollment-text {
   color: white;
   text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: larger;
+  line-height: 25px;
 }
 
 .form-control {
@@ -80,6 +89,23 @@ body,
 
 .navbar-toggler {
   border: none;
+}
+
+.mb-3 > input {
+  height: 30px;
+  outline: none;
+  margin: 20px 0;
+}
+
+.mb-3 > input:hover {
+background-color: white;
+color: black;
+}
+
+.mb-3 > input::placeholder:hover {
+  color: white;
+  font-size: medium;
+  text-align: center;
 }
 
 .offcanvas {

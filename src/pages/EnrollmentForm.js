@@ -16,7 +16,7 @@ const EnrollmentForm = () => {
       <p className="enrollment-text">{details.text}</p>
       <form className="enrollment-text">
         <div className="mb-3">
-          <input type="text" id="textInput" className="form-control" placeholder="Your name" value="User name" />
+          <input type="text" id="textInput" className="form-control" placeholder="Your name" />
         </div>
         <div className="mb-3">
           <label htmlFor="select" className="form-label">Dance Class</label>
