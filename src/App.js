@@ -16,21 +16,11 @@ const App = () => (
       <NavBar />
       <Routes>
         <Route exact path="/" element={<DanceClasses />} />
-      </Routes>
-      <Routes>
         <Route exact path="/Enrollment_Form" element={<EnrollmentForm />} />
-      </Routes>
-      <Routes>
-        <Route exact path="/sign_up" element={<SignupPage />} />
-      </Routes>
-      <Routes>
-        <Route exact path="/login" element={<Login />} />
-      </Routes>
-      <Routes>
-        <Route exact path="/logout" element={<Logout />} />
-      </Routes>
-      <Routes>
         <Route exact path="/Enrolled_Classes" element={<EnrolledClasses />} />
+        <Route exact path="/sign_up" element={<SignupPage />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/logout" element={<Logout />} />
       </Routes>
     </Router>
   </Provider>
