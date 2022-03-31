@@ -1,14 +1,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Logout from './components/reusable/Logout';
-import SignupPage from './components/pages/SignupPage';
-import Login from './components/pages/Login';
+import Logout from './pages/Logout';
+import SignupPage from './pages/SignupPage';
+import Login from './pages/Login';
 import store from './redux/configureStore';
 import NavBar from './components/navbar/NavBar';
-import DanceClasses from './components/pages/DanceClass';
-import EnrollmentForm from './components/pages/EnrollmentForm';
-import EnrolledClasses from './components/pages/EnrolledClasses';
+import DanceClasses from './pages/DanceClass';
+import EnrollmentForm from './pages/EnrollmentForm';
+import EnrolledClasses from './pages/EnrolledClasses';
 
 const App = () => (
   <Provider store={store}>
