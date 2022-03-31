@@ -5,12 +5,12 @@ const initialState = {
   lease_status: '',
 };
 
-const enrollementStatusAction = (payload) => ({
+const enrollmentStatusAction = (payload) => ({
   type: ENROLLMENT_STATUS,
   payload,
 });
 
-export const EnrollementReducer = (state = initialState, action) => {
+export const EnrollmentReducer = (state = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
     case CREATE_ENROLLMENT:
@@ -26,7 +26,7 @@ export const EnrollementReducer = (state = initialState, action) => {
   }
 };
 
-export const addEnrollementToAPI = (details) => async (dispatch) => {
+export const addEnrollmentToAPI = (details) => async (dispatch) => {
   const {
     from, to, cancelled, userId, apartmentId,
   } = details;
@@ -45,8 +45,8 @@ export const addEnrollementToAPI = (details) => async (dispatch) => {
         apartment_id: apartmentId,
       },
     });
-    dispatch(enrollementStatusAction('Class Successfully Enrolled!'));
+    dispatch(enrollmentStatusAction('Class Successfully Enrolled!'));
   } catch (error) {
-    dispatch(enrollementStatusAction('Class was not Enrolled!'));
+    dispatch(enrollmentStatusAction('Class was not Enrolled!'));
   }
 };
