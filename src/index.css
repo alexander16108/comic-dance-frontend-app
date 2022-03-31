@@ -67,7 +67,7 @@ h1 {
 .enrollment-text {
   color: white;
   text-align: center;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: larger;
   line-height: 25px;
 }
@@ -91,6 +91,10 @@ h1 {
   border: none;
 }
 
+input {
+  margin: 20px 0;
+}
+
 .mb-3 > input {
   height: 30px;
   outline: none;
@@ -98,8 +102,8 @@ h1 {
 }
 
 .mb-3 > input:hover {
-background-color: white;
-color: black;
+  background-color: white;
+  color: black;
 }
 
 .mb-3 > input::placeholder:hover {
