@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addEnrollmentToAPI } from '../redux/Enroll/Enroll';
+import { addEnrollmentToAPI } from '../redux/enroll/enroll';
 
 const EnrollmentForm = () => {
   const dispatch = useDispatch();
