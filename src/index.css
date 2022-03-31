@@ -66,6 +66,7 @@
 .sign-out:hover {
   background-color: #1abe28e8;
   color: #fff;
+  border-radius: 10px;
 }
 
 .copyright {
