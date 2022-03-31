@@ -8,26 +8,14 @@ const links = [
   {
     id: 2,
     path: '/enrollment_form',
-    text: 'Enrollment Form',
+    text: 'my Form',
     name: 'enroll_form',
   },
   {
     id: 3,
     path: '/my _classes',
-    text: 'My Classes',
+    text: 'Classes',
     name: 'my_classes',
-  },
-  {
-    id: 4,
-    path: '/sign_up',
-    text: 'SIGN UP',
-    name: 'sign_up',
-  },
-  {
-    id: 5,
-    path: '/login',
-    text: 'LOGIN',
-    name: 'sign_in',
   },
 ];
 
