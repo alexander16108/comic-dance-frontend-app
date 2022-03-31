@@ -24,6 +24,7 @@ const links = [
     name: 'sign_up',
   },
   {
+    id: 5,
     path: '/login',
     text: 'LOGIN',
     name: 'sign_in',
