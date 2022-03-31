@@ -81,7 +81,6 @@ body {
 
   #root {
     display: flex;
-    height: 100%;
   }
 
   .desktop-nav {
@@ -91,6 +90,7 @@ body {
     width: 20%;
     padding: 15px 0;
     text-align: center;
+    justify-content: space-between;
   }
 
   .logo-container {
@@ -103,7 +103,6 @@ body {
 
   .copyright {
     font-weight: bold;
-    padding-top: 80%;
     color: #616c7d;
   }
 }
