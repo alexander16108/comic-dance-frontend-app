@@ -19,12 +19,6 @@ const links = [
   },
   {
     id: 4,
-    path: '/delete_classes',
-    text: 'Delete Classes',
-    name: 'delete_Classes',
-  },
-  {
-    id: 5,
     path: '/sign_up',
     text: 'SIGN UP',
     name: 'sign_up',
