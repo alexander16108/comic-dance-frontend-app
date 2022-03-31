@@ -1,27 +1,39 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Logout from './pages/Logout';
+import SignupPage from './pages/SignupPage';
+import Login from './pages/Login';
+import store from './redux/configureStore';
 import NavBar from './components/navbar/NavBar';
 import DanceClasses from './pages/DanceClass';
 import EnrollmentForm from './pages/EnrollmentForm';
 import EnrolledClasses from './pages/EnrolledClasses';
-import DeleteClasses from './pages/DeleteClasses';
 
 const App = () => (
-  <Router>
-    <NavBar />
-    <Routes>
-      <Route exact path="/" element={<DanceClasses />} />
-    </Routes>
-    <Routes>
-      <Route exact path="/Enrollment_Form" element={<EnrollmentForm />} />
-    </Routes>
-    <Routes>
-      <Route exact path="/Enrolled_Classes" element={<EnrolledClasses />} />
-    </Routes>
-    <Routes>
-      <Route exact path="/Delete_Classes" element={<DeleteClasses />} />
-    </Routes>
-  </Router>
+  <Provider store={store}>
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route exact path="/" element={<DanceClasses />} />
+      </Routes>
+      <Routes>
+        <Route exact path="/Enrollment_Form" element={<EnrollmentForm />} />
+      </Routes>
+      <Routes>
+        <Route exact path="/sign_up" element={<SignupPage />} />
+      </Routes>
+      <Routes>
+        <Route exact path="/login" element={<Login />} />
+      </Routes>
+      <Routes>
+        <Route exact path="/logout" element={<Logout />} />
+      </Routes>
+      <Routes>
+        <Route exact path="/Enrolled_Classes" element={<EnrolledClasses />} />
+      </Routes>
+    </Router>
+  </Provider>
 );
 
 export default App;

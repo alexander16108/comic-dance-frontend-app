@@ -49,7 +49,7 @@ const DesktopNavBar = ({ links, logo }) => {
         )}
       </ul>
       <div className="copyright">
-        <p>© 2022 ACHT.</p>
+        <p>© 2022 AO&MH.</p>
       </div>
     </nav>
   );
