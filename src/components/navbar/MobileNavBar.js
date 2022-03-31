@@ -1,14 +1,12 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { HiMenuAlt4 } from 'react-icons/hi';
+import { useSelector } from 'react-redux';
 
 const MobileNavBar = ({ links, logo }) => {
-  const state = useSelector((state) => (state));
-  const { loggedIn } = state.user;
-
+  const loggedIn = useSelector((state) => state.user.loggedIn);
   return (
-    <nav className="mobile navbar navbar-light fixed-top" data-testid="mobile-navbar">
+    <nav className="mobile navbar navbar-light bg-light fixed-top">
       <div className="container-fluid">
         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <HiMenuAlt4 className="menu4" />
@@ -20,7 +18,7 @@ const MobileNavBar = ({ links, logo }) => {
             </div>
             <button type="button" className="btn-close text-reset close" data-bs-dismiss="offcanvas" aria-label="Close" />
           </div>
-          <div className="offcanvas-body text-center">
+          <div className="offcanvas-body align-self-center text-center">
             <ul className="navLinks">
               {links.map((link) => (
                 <li key={link.id} className={link.name} data-bs-toggle="offcanvas">
@@ -30,31 +28,17 @@ const MobileNavBar = ({ links, logo }) => {
                 </li>
               ))}
               {loggedIn === 'in' ? (
-                <>
-                  <li className="my_halls" data-bs-toggle="offcanvas">
-                    <NavLink exact="true" to="/my_halls">
-                      My Dance Classes
-                    </NavLink>
-                  </li>
-                  <li className="logout" data-bs-toggle="offcanvas">
-                    <NavLink exact="true" to="/logout">
-                      LOGOUT
-                    </NavLink>
-                  </li>
-                </>
+                <li className="logout" data-bs-toggle="offcanvas">
+                  <NavLink exact="true" to="/logout">
+                    LOGOUT
+                  </NavLink>
+                </li>
               ) : (
-                <>
-                  <li className="sign_in" data-bs-toggle="offcanvas">
-                    <NavLink exact="true" to="/login">
-                      LOGIN
-                    </NavLink>
-                  </li>
-                  <li className="sign_up" data-bs-toggle="offcanvas">
-                    <NavLink exact="true" to="sign_up">
-                      SIGN UP
-                    </NavLink>
-                  </li>
-                </>
+                <li className="sign_in" data-bs-toggle="offcanvas">
+                  <NavLink exact="true" to="/login">
+                    LOGIN
+                  </NavLink>
+                </li>
               )}
             </ul>
             <div className="copyright">
