@@ -41,8 +41,7 @@
   padding-right: 30px;
 }
 
-.navLinks li a,
-.sign-out {
+.navLinks li a {
   font-size: 1.1em;
   font-weight: bold;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -50,20 +49,12 @@
   padding: 25px;
 }
 
-.sign-out {
-  border: none;
-  width: 100%;
-  background-color: #f4f4f4;
-}
-
-.navLinks li,
-.sign-out {
+.navLinks li {
   padding: 20px 0;
 }
 
 .active,
-.navLinks li a:hover,
-.sign-out:hover {
+.navLinks li a:hover {
   background-color: #1abe28e8;
   color: #fff;
   border-radius: 10px;
