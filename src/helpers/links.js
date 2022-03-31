@@ -23,6 +23,11 @@ const links = [
     text: 'SIGN UP',
     name: 'sign_up',
   },
+  {
+    path: '/login',
+    text: 'LOGIN',
+    name: 'sign_in',
+  },
 ];
 
 export default links;

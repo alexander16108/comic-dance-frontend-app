@@ -10,18 +10,18 @@ const EnrollmentForm = () => {
 
   return (
     <div className="enrollment-form">
-      <h1>{details.heading}</h1>
-      <hr />
-      <p>{details.text}</p>
-      <form>
+      <div id="color-overlay" />
+      <h1 className="enrollment-text">{details.heading}</h1>
+      <hr className="enrollment-text" />
+      <p className="enrollment-text">{details.text}</p>
+      <form className="enrollment-text">
         <div className="mb-3">
-          <label htmlFor="textInput" className="form-label">Name</label>
           <input type="text" id="textInput" className="form-control" placeholder="Your name" value="User name" />
         </div>
         <div className="mb-3">
           <label htmlFor="select" className="form-label">Dance Class</label>
           <select id="select" className="form-select">
-            <option selected>Selected Dance Class</option>
+            <option defaultValue="DanceStyle 1" selected>Selected Dance Class</option>
             <option>Wavy</option>
           </select>
         </div>
