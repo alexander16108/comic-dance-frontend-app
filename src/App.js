@@ -9,7 +9,7 @@ import Detail from './components/singleClass/singleClass';
 import NavBar from './components/navbar/NavBar';
 import EnrollmentForm from './pages/EnrollmentForm';
 import EnrolledClasses from './pages/EnrolledClasses';
-import Home from './components/home/homepage';
+import Home from './pages/homepage';
 
 const App = () => (
   <Provider store={store}>
