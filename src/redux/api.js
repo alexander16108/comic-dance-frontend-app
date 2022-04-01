@@ -11,4 +11,13 @@ const fetchDataClasses = async () => {
   }
 };
 
+export const fetchSingleClasses = async (id) => {
+  try {
+    const response = await axios.get(`${baseUrl}/classes/${id}`);
+    return response.data;
+  } catch (e) {
+    throw e.toString();
+  }
+};
+
 export default fetchDataClasses;

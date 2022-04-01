@@ -222,8 +222,8 @@ input {
 
 .card {
   height: 500px;
-  width: 450px;
-  border: 2px solid #000;
+  width: 500px;
+  border: 15px solid #163d3b;
   border-radius: 10px;
 }
 
