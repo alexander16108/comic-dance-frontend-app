@@ -200,4 +200,23 @@ input {
   }
 }
 
-/* Styling for page layout and nav bar  */
+/* Style for homepage */
+
+.class-image {
+  width: 70%;
+  height: 250px;
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.class-heading,
+.classname,
+.description {
+  color: #0dafaa;
+}
+
+/* Style for homepage */
