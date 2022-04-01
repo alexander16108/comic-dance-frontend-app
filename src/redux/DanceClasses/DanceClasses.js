@@ -37,7 +37,7 @@ export const classReducer = (state = initialState, action) => {
   }
 };
 
-export const fetchClasses = () => (async (dispatch) => {
+const fetchClasses = () => (async (dispatch) => {
   const classs = await fetchDataClasses();
   dispatch(
     {
@@ -57,4 +57,4 @@ export const singleClasses = (id) => (async (dispatch) => {
   );
 });
 
-//  default fetchClasses;
+export default fetchClasses;
