@@ -1,10 +1,12 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { userReducer } from './user/user';
+import { EnrollmentReducer } from './enroll/enroll';
 import fetchClasses, { classReducer } from './DanceClasses/DanceClasses';
 
 const rootReducer = combineReducers({
   user: userReducer,
+  EnrollmentReducer,
   class: classReducer,
 });
 
