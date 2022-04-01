@@ -9,9 +9,9 @@ const initialState = {
 };
 
 // Constants
-const SIGN_UP = 'comic_dance_hall/SIGN_UP';
-const LOGIN = 'comic_dance_hall/LOGIN';
-const LOGOUT = 'comic_dance_hall/LOGOUT';
+const SIGN_UP = 'comic_dance_club/SIGN_UP';
+const LOGIN = 'comic_dance_club/LOGIN';
+const LOGOUT = 'comic_dance_club/LOGOUT';
 
 // Action Creators
 export const signUp = (payload) => ({
@@ -110,7 +110,7 @@ export const hitAPIWithSigninDetails = (details) => async (dispatch) => {
     };
 
     localStorage.setItem('userAuth', JSON.stringify(authorization));
-    localStorage.setItem('ComicDanceHallUser', JSON.stringify(mainUser));
+    localStorage.setItem('ComicDancelubUser', JSON.stringify(mainUser));
 
     dispatch(signUp(mainUser));
   } catch (error) {
@@ -147,7 +147,7 @@ export const hitAPIWithLogoutDetails = (details) => async (dispatch) => {
     }));
 
     localStorage.removeItem('userAuth');
-    localStorage.removeItem('ComicDanceHallUser');
+    localStorage.removeItem('ComicDanceClubUser');
   } catch (error) {
     dispatch(
       logout({

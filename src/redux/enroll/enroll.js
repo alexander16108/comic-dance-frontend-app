@@ -30,7 +30,7 @@ export const addEnrollmentToAPI = (details) => async (dispatch) => {
   const {
     from, to, cancelled, userId, apartmentId,
   } = details;
-  const leaseURL = `https://comic-dance-hall-api.herokuapp.com/user/${userId}/enrolled`;
+  const leaseURL = `https://comic-dance-club.herokuapp.com/users${userId}/enrolled`;
   try {
     await fetch(leaseURL, {
       method: 'post',
