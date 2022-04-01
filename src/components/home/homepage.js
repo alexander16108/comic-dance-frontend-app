@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-export const Home = () => {
+const Home = () => {
   const classess = useSelector((state) => state.class);
   const { classs } = classess;
   console.log(classs, 'hello');
@@ -19,11 +19,13 @@ export const Home = () => {
       classs[0].map((item) => (
         <div key={item.id} className="col-12 col-md-6 col-lg-4">
           <Link style={{ textDecoration: 'none' }} to={`${item.id}`} className="m-3">
-            <img className="class-image center-block" src={item.image} alt={item.name} />
-            <h4 className="my-2 text-center classname">{item.name}</h4>
-            <p className="description font-weight-light text-left ms-3">
-              {item.description}
-            </p>
+            <div className="card mx-3">
+              <img className="class-image center-block" src={item.image} alt={item.name} />
+              <h4 className="my-2 text-center classname">{item.name}</h4>
+              <p className="description font-weight-light text-left ms-3">
+                {item.description}
+              </p>
+            </div>
           </Link>
         </div>
       ))
