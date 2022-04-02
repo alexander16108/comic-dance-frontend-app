@@ -28,11 +28,11 @@ export const EnrollmentReducer = (state = initialState, action) => {
 
 export const addEnrollmentToAPI = (details) => async (dispatch) => {
   const {
-    from, to, cancelled, userId, apartmentId,
+    from, to, cancelled, userId, itemId,
   } = details;
-  const leaseURL = `https://comic-dance-club.herokuapp.com/users${userId}/enrolled`;
+  const danceClassURL = `https://comic-dance-club.herokuapp.com/users${userId}`;
   try {
-    await fetch(leaseURL, {
+    await fetch(danceClassURL, {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ export const addEnrollmentToAPI = (details) => async (dispatch) => {
         to,
         cancelled,
         user_id: userId,
-        apartment_id: apartmentId,
+        item_id: itemId,
       },
     });
     dispatch(enrollmentStatusAction('Class Successfully Enrolled!'));

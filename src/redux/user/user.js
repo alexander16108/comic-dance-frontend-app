@@ -110,7 +110,7 @@ export const hitAPIWithSigninDetails = (details) => async (dispatch) => {
     };
 
     localStorage.setItem('userAuth', JSON.stringify(authorization));
-    localStorage.setItem('ComicDancelubUser', JSON.stringify(mainUser));
+    localStorage.setItem('ComicDanceClubUser', JSON.stringify(mainUser));
 
     dispatch(signUp(mainUser));
   } catch (error) {

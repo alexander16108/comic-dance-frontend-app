@@ -10,6 +10,7 @@ import NavBar from './components/navbar/NavBar';
 import EnrollmentForm from './pages/EnrollmentForm';
 import EnrolledClasses from './pages/EnrolledClasses';
 import Home from './pages/homepage';
+// require('dotenv').config()
 
 const App = () => (
   <Provider store={store}>
@@ -22,6 +23,8 @@ const App = () => (
         <Route exact path="/Enrolled_Classes" element={<EnrolledClasses />} />
         <Route exact path="/sign_up" element={<SignupPage />} />
         <Route exact path="/login" element={<Login />} />
+        )
+        {' '}
         <Route exact path="/logout" element={<Logout />} />
       </Routes>
     </Router>
