@@ -4,7 +4,7 @@ const baseUrl = 'https://comic-dance-club-api.herokuapp.com';
 
 const fetchDataClasses = async () => {
   try {
-    const response = await axios.get(`${baseUrl}/api/items`);
+    const response = await axios.get(`${baseUrl}/api/dances`);
     return response.data;
   } catch (e) {
     throw e.toString();
@@ -13,7 +13,7 @@ const fetchDataClasses = async () => {
 
 export const fetchSingleClasses = async (id) => {
   try {
-    const response = await axios.get(`${baseUrl}/api/items${id}`);
+    const response = await axios.get(`${baseUrl}/api/dances${id}`);
     return response.data;
   } catch (e) {
     throw e.toString();
