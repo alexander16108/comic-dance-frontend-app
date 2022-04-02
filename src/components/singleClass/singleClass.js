@@ -2,14 +2,14 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Detail = () => {
-  const classes = useSelector((state) => state.classs);
-  const { classs } = classes;
+  const danceClass = useSelector((state) => state.class);
+  const { classes } = danceClass;
   const {
     name, description, image, created_at: created, updated_at: updated,
     city,
-  } = classs;
+  } = classes;
 
-  if (!classs) {
+  if (!classes) {
     return (
       <h1>Loading</h1>
     );
