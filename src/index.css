@@ -220,7 +220,7 @@ input {
   margin: 0 10px;
 }
 
-.card {
+.homepage-card {
   height: 500px;
   width: 500px;
   border: 15px solid #163d3b;
@@ -235,6 +235,38 @@ input {
 .hover_effect:hover {
   height: 70%;
   width: 100%;
+}
+
+/* Styles for singledanceclass page */
+
+.singlecard {
+  border: 15px solid #163d3b;
+  border-radius: 10px;
+}
+
+.singledescription {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+
+.singledanceclass-image {
+  width: 70%;
+  height: 400px;
+}
+
+.book-danceclass {
+  transition: all 2s;
+  cursor: pointer;
+}
+
+.book-danceclass:hover {
+  background-color: #3e8e41;
+}
+
+.button:active {
+  background-color: #8e3e81;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 /* Style for homepage */

@@ -4,7 +4,10 @@ import { useSelector } from 'react-redux';
 const Detail = () => {
   const classes = useSelector((state) => state.classs);
   const { classs } = classes;
-  const { name, description, image } = classs;
+  const {
+    name, description, image, created_at: created, updated_at: updated,
+    city,
+  } = classs;
 
   if (!classs) {
     return (
@@ -14,12 +17,34 @@ const Detail = () => {
   return (
     <section>
       <h1>Hello details</h1>
-      <div className="card mx-3">
-        <img className="class-image hover_effect center-block" src={image} alt={name} />
-        <h4 className="my-2 text-center classname">{name}</h4>
-        <p className="description font-weight-light text-center ms-3">
-          {description}
-        </p>
+      <div className="homepage-card mx-3">
+        <div className="row">
+          <div className="text-center mt-5">
+            <p>
+              Created-At:
+              {' '}
+              {created}
+            </p>
+            <p>
+              Updated-At:
+              {' '}
+              {updated}
+            </p>
+            <p>
+              City:
+              {' '}
+              {city}
+            </p>
+            <button className="btn btn-success book-danceclass my-4" type="button">Book danceclass</button>
+          </div>
+          <div className="singlecard">
+            <img className="singledanceclass-image m-3" src={image} alt={name} />
+            <h4 className="my-2 text-center danceclassname">{name}</h4>
+            <p className="singledescription font-weight-light text-center ms-3">
+              {description}
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
