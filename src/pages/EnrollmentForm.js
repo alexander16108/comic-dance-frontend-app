@@ -11,7 +11,7 @@ const EnrollmentForm = () => {
   const [date2, setDate2] = useState('');
 
   const userId = useSelector((state) => state.user.userId);
-  const status = useSelector((state) => state.enrollmentReducer.enrollment_status);
+  const status = useSelector((state) => state.EnrollmentReducer.enrollment_status);
 
   const classId = 1;
 
@@ -36,13 +36,13 @@ const EnrollmentForm = () => {
   };
 
   return (
-    <div className="lease-form" data-testid="leaseForm">
+    <div className="enrollment-form" data-testid="enrollmentForm">
       <div id="color-overlay" />
       <p>{status}</p>
-      <h1 className="lease-text">{details.heading}</h1>
+      <h1 className="enrollment-text">{details.heading}</h1>
       <hr />
-      <p className="lease-text">{details.text}</p>
-      <form className="lease-text the-form">
+      <p className="enrollment-text">{details.text}</p>
+      <form className="enrollment-text the-form">
         <div className="datetime mt-3">
           <h6>from: </h6>
           <input type="date" id="date" className="form-control fc" onChange={(e) => setDate1(e.target.value)} value={date1} />
