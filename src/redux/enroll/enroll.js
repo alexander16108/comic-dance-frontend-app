@@ -2,7 +2,7 @@ const CREATE_ENROLLMENT = 'comic_dance_hall/CREATE_ENROLLMENT';
 const ENROLLMENT_STATUS = 'comic_dance_hall/ENROLLMENT_STATUS';
 
 const initialState = {
-  lease_status: '',
+  enrollment_status: '',
 };
 
 const enrollmentStatusAction = (payload) => ({
