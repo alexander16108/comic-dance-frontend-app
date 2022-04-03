@@ -1,14 +1,57 @@
-const CREATE_ENROLLMENT = 'comic_dance_hall/CREATE_ENROLLMENT';
-const ENROLLMENT_STATUS = 'comic_dance_hall/ENROLLMENT_STATUS';
+import axios from 'axios';
+
+const GET_ENROLLMENTS_REQUEST = 'GET_ENROLLMENTS_REQUEST';
+const GET_ENROLLMENTS_SUCCESS = 'GET_ENROLLMENTS_SUCCESS';
+const GET_ENROLLMENTS_FAIL = 'GET_ENROLLMENTS_FAIL';
+
+const GET_ENROLLMENT_BY_ID_REQUEST = 'GET_ENROLLMENT_BY_ID_REQUEST';
+const GET_ENROLLMENT_BY_ID_SUCCESS = 'GET_ENROLLMENT_BY_ID_SUCCESS';
+const GET_ENROLLMENT_BY_ID_FAIL = 'GET_ENROLLMENT_BY_ID_FAIL';
+
+const CREATE_ENROLLMENT = 'comic_dance_club/CREATE_ENROLLMENT';
+const ENROLLMENT_STATUS = 'comic_dance_club/ENROLLMENT_STATUS';
+
+const baseUrl = process.env.REACT_APP_BASE_URL;
 
 const initialState = {
-  enrollment_status: '',
+  enroll_status: '',
 };
 
-const enrollmentStatusAction = (payload) => ({
-  type: ENROLLMENT_STATUS,
-  payload,
-});
+export const getMyEnrollmentAction = (userId) => async (dispatch) => {
+  try {
+    dispatch({ type: GET_ENROLLMENTS_REQUEST });
+    const { data } = await axios.get(`${baseUrl}/user/${userId}/enroll`);
+    dispatch({ type: GET_ENROLLMENTS_SUCCESS, payload: data });
+  } catch (error) {
+    dispatch({ type: GET_ENROLLMENTS_FAIL, payload: error.message });
+  }
+};
+
+// eslint-disable-next-line consistent-return
+export const getSingleEnrollmentAction = (id, userId) => async (dispatch) => {
+  try {
+    dispatch({ type: GET_ENROLLMENT_BY_ID_REQUEST });
+    // const { user } = getState();
+    const { data } = await axios.get(`${baseUrl}/user/${userId}/enroll/${id}`);
+    dispatch({ type: GET_ENROLLMENT_BY_ID_SUCCESS, payload: data });
+  } catch (error) {
+    dispatch({ type: GET_ENROLLMENT_BY_ID_FAIL, payload: error.message });
+  }
+};
+
+export const myEnrollmentReducer = (state =
+{ loading: true, enroll: null, error: null }, action) => {
+  switch (action.type) {
+    case GET_ENROLLMENTS_REQUEST:
+      return { loading: true };
+    case GET_ENROLLMENTS_SUCCESS:
+      return { loading: false, enroll: action.payload };
+    case GET_ENROLLMENTS_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
 
 export const EnrollmentReducer = (state = initialState, action) => {
   const { type, payload } = action;
@@ -19,34 +62,55 @@ export const EnrollmentReducer = (state = initialState, action) => {
       };
     case ENROLLMENT_STATUS:
       return {
-        enrollment_status: payload,
+        enroll_status: payload,
       };
     default:
       return state;
   }
 };
 
+export const enrollmentDetailsReducer = (state =
+{ loading: true, enroll: null, err: null }, action) => {
+  switch (action.type) {
+    case GET_ENROLLMENT_BY_ID_REQUEST:
+      return { loading: true };
+    case GET_ENROLLMENT_BY_ID_SUCCESS:
+      return { loading: false, enroll: action.payload };
+    case GET_ENROLLMENT_BY_ID_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+
+const EnrollmentStatusAction = (payload) => ({
+  type: ENROLLMENT_STATUS,
+  payload,
+});
+
 export const addEnrollmentToAPI = (details) => async (dispatch) => {
   const {
-    from, to, cancelled, userId, itemId,
+    from, to, cancelled, userId, apartmentId,
   } = details;
-  const danceClassURL = `https://comic-dance-club.herokuapp.com/users${userId}`;
+  const enrollURL = `${baseUrl}/user/${userId}/enroll`;
   try {
-    await fetch(danceClassURL, {
+    await fetch(enrollURL, {
       method: 'post',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: {
-        from,
-        to,
-        cancelled,
-        user_id: userId,
-        item_id: itemId,
-      },
+      body: JSON.stringify(
+        {
+          from,
+          to,
+          cancelled,
+          user_id: userId,
+          apartment_id: apartmentId,
+        },
+      ),
     });
-    dispatch(enrollmentStatusAction('Class Successfully Enrolled!'));
+    dispatch(EnrollmentStatusAction('Enrollment Successfully Created!'));
   } catch (error) {
-    dispatch(enrollmentStatusAction('Class was not Enrolled!'));
+    dispatch(EnrollmentStatusAction('Enrollment was not Created!'));
   }
 };
