@@ -90,7 +90,7 @@ const EnrollmentStatusAction = (payload) => ({
 
 export const addEnrollmentToAPI = (details) => async (dispatch) => {
   const {
-    from, to, cancelled, userId, apartmentId,
+    from, to, cancelled, userId, classId,
   } = details;
   const enrollURL = `${baseUrl}/user/${userId}/enroll`;
   try {
@@ -105,7 +105,7 @@ export const addEnrollmentToAPI = (details) => async (dispatch) => {
           to,
           cancelled,
           user_id: userId,
-          apartment_id: apartmentId,
+          class_id: classId,
         },
       ),
     });
