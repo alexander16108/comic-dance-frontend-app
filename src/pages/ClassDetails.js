@@ -9,11 +9,11 @@ const MyClassDetails = () => {
   const dispatch = useDispatch();
   const params = useParams();
   const { classDetails, user } = useSelector((state) => state);
-  const { classs, loading, err: error } = classDetails;
+  const { classDetail, loading, err: error } = classDetails;
 
   useEffect(() => {
     if (user.userId) {
-      dispatch(getSingleEnrollmentAction(params.lease_id, user.userId));
+      dispatch(getSingleEnrollmentAction(params.enroll_id, user.userId));
     }
   }, [user]);
 
@@ -22,7 +22,7 @@ const MyClassDetails = () => {
   }, []);
 
   return (
-    classs ? (
+    classDetail ? (
       <div className="container">
         {error && (
         <p className="alert alert-danger">
@@ -33,18 +33,18 @@ const MyClassDetails = () => {
           <div className=" card mb-3 mt-5">
             <div className="row g-0">
               <div className="col-md-5">
-                <img src={lease.apartmentDetails.image} className="h-100 img-fluid rounded-start" alt="..." />
+                <img src={enroll.classDetails.image} className="h-100 img-fluid rounded-start" alt="..." />
                 {' '}
 
               </div>
               <div className="col-md-7">
                 <div className="card-body">
                   <h3 className="card-title text-info text-center">
-                    {lease.apartmentDetails.name}
+                    {enroll.classDetails.name}
                   </h3>
                   <p className="text-center">
                     {' '}
-                    {lease.apartmentDetails.description}
+                    {enroll.classDetails.description}
                     {' '}
                   </p>
                   <table className="table">
@@ -54,36 +54,25 @@ const MyClassDetails = () => {
                         <td>City</td>
                         <td> - </td>
                         <td />
-                        <td>{lease.apartmentDetails.city}</td>
+                        <td>{enroll.classDetails.city}</td>
                       </tr>
                       <tr>
                         <td />
 
-                        <td>Monthly Rent</td>
+                        <td>Monthly Fees</td>
                         <td> - </td>
                         <td />
                         <td>
                           $
-                          {lease.apartmentDetails.monthly_rent}
+                          {enroll.enrollDetails.monthly_fees}
                         </td>
                       </tr>
                       <tr>
                         <td />
-                        <td>Maintenance Fee</td>
-                        <td> - </td>
-                        <td />
-                        <td>
-                          $
-                          {lease.apartmentDetails.maintenance_fee}
-                        </td>
-                      </tr>
-                      <tr>
-                        <td />
-
                         <td>Expiry Date</td>
                         <td> - </td>
                         <td />
-                        <td>{lease.apartmentDetails.reservation_expiry_date}</td>
+                        <td>{enroll.classDetails.reservation_expiry_date}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -92,17 +81,6 @@ const MyClassDetails = () => {
             </div>
           </div>
         )}
-
-        <h4 className="text-center text-info  my-5">Interiors</h4>
-        <div className="interior-card">
-          { loading ? '' : (lease.apartmentDetails.interior.map((interior) => (
-            <div key={interior} className="col d-flex justify-content-center mb-3 row g-5">
-              <div className=" border bg-light h-80 w-100 ">
-                <img src={interior} className="img-fluid rounded-start h-100 w-100 align-center" alt="..." />
-              </div>
-            </div>
-          )))}
-        </div>
       </div>
     ) : <p>Please, wait...</p>
   );
