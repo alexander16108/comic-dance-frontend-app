@@ -7,11 +7,11 @@ import persistLogin from '../helpers/persistLogin';
 
 const Home = () => {
   const dispatch = useDispatch();
-  const danceClass = useSelector((state) => state.class);
-  const { classes } = danceClass;
+  const danceClass = useSelector((state) => state?.class ?? {});
+  const { classes = [] } = danceClass;
 
   const [dance, setDance] = useState(
-    classes[0] ? classes[0].slice(0, 3) : [],
+    classes[0]?.slice(0, 3) ?? [],
   );
 
   const start = useRef(0);

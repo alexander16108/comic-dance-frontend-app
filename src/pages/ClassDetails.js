@@ -13,7 +13,7 @@ const MyClassDetails = () => {
 
   useEffect(() => {
     if (user.userId) {
-      dispatch(getSingleEnrollmentAction(params.enroll_id, user.userId));
+      dispatch(getSingleEnrollmentAction(params.class_id, user.userId));
     }
   }, [user]);
 

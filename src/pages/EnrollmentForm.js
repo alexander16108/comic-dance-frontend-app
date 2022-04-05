@@ -6,7 +6,7 @@ import { addEnrollmentToAPI } from '../redux/enroll/enroll';
 import { login } from '../redux/user/user';
 import persistLogin from '../helpers/persistLogin';
 
-const enrollmentForm = () => {
+const EnrollmentForm = () => {
   const dispatch = useDispatch();
 
   const location = useLocation();
@@ -105,4 +105,4 @@ const enrollmentForm = () => {
   );
 };
 
-export default enrollmentForm;
+export default EnrollmentForm;

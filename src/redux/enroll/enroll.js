@@ -43,6 +43,17 @@ export const getSingleEnrollmentAction = (id, userId) => async (dispatch) => {
   }
 };
 
+export const deleteEnrollmentAction = (id) => async (dispatch, getState) => {
+  try {
+    dispatch({ type: DELETE_ENROLLMENT_REQUEST });
+    const { user } = getState();
+    await axios.delete(`${baseUrl}/user/${user.userId}/enroll/${id}`);
+    dispatch({ type: DELETE_ENROLLMENT_SUCCESS });
+  } catch (error) {
+    dispatch({ type: DELETE_ENROLLMENT_FAIL, payload: error.message });
+  }
+};
+
 export const myEnrollmentReducer = (state =
 { loading: true, enroll: null, error: null }, action) => {
   switch (action.type) {

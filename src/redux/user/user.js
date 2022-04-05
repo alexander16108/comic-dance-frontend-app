@@ -86,7 +86,7 @@ const hitAPIWithSignupDetails = (details) => async (dispatch) => {
 export const hitAPIWithSigninDetails = (details) => async (dispatch) => {
   const { email, password } = details;
   try {
-    const signUpRespons = await axios({
+    const signUpResponse = await axios({
       method: 'post',
       url: `${process.env.REACT_APP_LOGIN_ENDPOINT}`,
       data: {
@@ -97,7 +97,7 @@ export const hitAPIWithSigninDetails = (details) => async (dispatch) => {
       },
     });
 
-    const { data, headers } = signUpRespons;
+    const { data, headers } = signUpResponse;
     const { user } = data;
     const { authorization } = headers;
 

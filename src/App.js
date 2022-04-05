@@ -7,8 +7,8 @@ import Login from './pages/Login';
 import store from './redux/configureStore';
 import Detail from './components/singleClass/singleClass';
 import NavBar from './components/navbar/NavBar';
-import enrollmentForm from './pages/EnrollmentForm';
-import EnrolledClasses from './pages/EnrolledClasses';
+import EnrollmentForm from './pages/EnrollmentForm';
+import EnrolledClasses from './pages/myClasses';
 import Home from './pages/homepage';
 import MyClassDetails from './pages/ClassDetails';
 // require('dotenv').config()
@@ -20,7 +20,7 @@ const App = () => (
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/details" element={<Detail />} />
-        <Route exact path="/enrollment_form" element={<enrollmentForm />} />
+        <Route exact path="/enrollment_form" element={<EnrollmentForm />} />
         <Route exact path="/my_classes" element={<EnrolledClasses />} />
         <Route exact path="/my_classes/: class_id" element={<MyClassDetails />} />
         <Route exact path="/sign_up" element={<SignupPage />} />
