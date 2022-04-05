@@ -12,8 +12,10 @@ const Logout = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
   const { loggedIn } = user;
+
   const [show, setShow] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const {
     overlay,
     cancel,
@@ -24,8 +26,10 @@ const Logout = () => {
     overlayInner,
     areYouSure,
   } = style;
+
   const [loading, setIsloading] = useState(false);
   const [color] = useState('#ffffff');
+
   const override = css`
     display: block;
     margin: 0 auto;
@@ -38,16 +42,19 @@ const Logout = () => {
     setIsLoggedIn(() => true);
     setIsloading(() => true);
   };
+
   const handleCancel = () => {
     setShow(() => false);
     navigate('/', { replace: true });
   };
+
   useEffect(() => {
     if (loggedIn === 'out' && isLoggedIn) {
       setShow(() => false);
       navigate('/', { replace: true });
     }
   }, [user, setIsLoggedIn]);
+
   useEffect(() => {
     window.scrollTo(0, 0);
     document.body.classList.add('stop-scrolling');
@@ -55,6 +62,7 @@ const Logout = () => {
       document.body.classList.remove('stop-scrolling');
     };
   }, []);
+
   return show ? (
     <div className={overlay}>
       <div className={overlayInner}>
@@ -70,6 +78,7 @@ const Logout = () => {
               Cancel
             </button>
           </div>
+
           <div className={yes}>
             <button
               onClick={handleLogout}
@@ -87,4 +96,5 @@ const Logout = () => {
     </div>
   ) : null;
 };
+
 export default Logout;
