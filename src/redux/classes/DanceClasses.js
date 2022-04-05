@@ -1,22 +1,22 @@
 import fetchDataClasses, { fetchSingleClasses } from '../api';
 
 const initialState = {
-  classes: [],
-  class: {},
+  danceclasses: [],
+  danceclass: {},
 };
 
 // Constants
-const FETCH_CLASSES = 'FETCH_CLASSES';
-const FETCH_ONE_CLASS = 'FETCH_ONE_CLASS';
+const FETCH_DANCE_CLASSES = 'FETCH_DANCE_CLASSES';
+const FETCH_ONE_DANCE_CLASS = 'FETCH_ONE_DANCE_CLASS';
 
 // Action Creators
 export const getAllClasses = (payload) => ({
-  type: FETCH_CLASSES,
+  type: FETCH_DANCE_CLASSES,
   payload,
 });
 
 export const getOneClass = (payload) => ({
-  type: FETCH_ONE_CLASS,
+  type: FETCH_ONE_DANCE_CLASS,
   payload,
 });
 
@@ -24,13 +24,13 @@ export const getOneClass = (payload) => ({
 export const classReducer = (state = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
-    case FETCH_CLASSES:
+    case FETCH_DANCE_CLASSES:
       return {
         ...state,
-        classes: [...state.classes, payload],
+        danceclasses: [...state.danceclasses, payload],
       };
-    case FETCH_ONE_CLASS:
-      return { class: payload };
+    case FETCH_ONE_DANCE_CLASS:
+      return { danceclass: payload };
 
     default:
       return state;
@@ -38,21 +38,21 @@ export const classReducer = (state = initialState, action) => {
 };
 
 const fetchClasses = () => (async (dispatch) => {
-  const classs = await fetchDataClasses();
+  const danceClass = await fetchDataClasses();
   dispatch(
     {
-      type: FETCH_CLASSES,
-      payload: classs,
+      type: FETCH_DANCE_CLASSES,
+      payload: danceClass,
     },
   );
 });
 
 export const singleClasses = (id) => (async (dispatch) => {
-  const classs = await fetchSingleClasses(id);
+  const danceClass = await fetchSingleClasses(id);
   dispatch(
     {
-      type: FETCH_ONE_CLASS,
-      payload: classs,
+      type: FETCH_ONE_DANCE_CLASS,
+      payload: danceClass,
     },
   );
 });

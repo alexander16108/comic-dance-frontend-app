@@ -8,6 +8,10 @@ const GET_ENROLLMENT_BY_ID_REQUEST = 'GET_ENROLLMENT_BY_ID_REQUEST';
 const GET_ENROLLMENT_BY_ID_SUCCESS = 'GET_ENROLLMENT_BY_ID_SUCCESS';
 const GET_ENROLLMENT_BY_ID_FAIL = 'GET_ENROLLMENT_BY_ID_FAIL';
 
+const DELETE_ENROLLMENT_REQUEST = 'DELETE_ENROLLMENT_REQUEST';
+const DELETE_ENROLLMENT_SUCCESS = 'DELETE_ENROLLMENT_SUCCESS';
+const DELETE_ENROLLMENT_FAIL = 'DELETE_ENROLLMENT_FAIL';
+
 const CREATE_ENROLLMENT = 'comic_dance_club/CREATE_ENROLLMENT';
 const ENROLLMENT_STATUS = 'comic_dance_club/ENROLLMENT_STATUS';
 
@@ -77,6 +81,19 @@ export const enrollmentDetailsReducer = (state =
     case GET_ENROLLMENT_BY_ID_SUCCESS:
       return { loading: false, enroll: action.payload };
     case GET_ENROLLMENT_BY_ID_FAIL:
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
+
+export const deleteEnrollmentReducer = (state = { enrollment: null }, action) => {
+  switch (action.type) {
+    case DELETE_ENROLLMENT_REQUEST:
+      return { loading: true };
+    case DELETE_ENROLLMENT_SUCCESS:
+      return { loading: false, message: 'Enrollment Deleted Successfully' };
+    case DELETE_ENROLLMENT_FAIL:
       return { loading: false, error: action.payload };
     default:
       return state;

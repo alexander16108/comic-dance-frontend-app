@@ -39,7 +39,7 @@ const enrollmentForm = () => {
 
   const [date2, setDate2] = useState(day2Value);
 
-  const [lease] = useState({
+  const [enroll] = useState({
     from: '',
     to: '',
     cancelled: false,
@@ -49,7 +49,7 @@ const enrollmentForm = () => {
 
   const submitEnrollment = () => {
     dispatch(addEnrollmentToAPI({
-      ...lease,
+      ...enroll,
       from: date1,
       to: date2,
       userId,
@@ -58,7 +58,7 @@ const enrollmentForm = () => {
 
   const details = {
     heading: 'Book a Dance Lesson/Class',
-    text: 'There are 15 different Dance Classes  and different instructors to learn from listed. Rangeing from South American Samba Dance to the modern break dances. Classes are taught by some of the world best dance instructors and alumni, Feel free to pick to a class to experience bliss learning wih your colleague and instructors',
+    text: 'There are 15 different Dance Classes  and different instructors to learn from listed. Ranging from South American Samba Dance to the modern break dances. Classes are taught by some of the world best dance instructors and alumni, Feel free to pick to a class to experience bliss learning wih your colleague and instructors',
   };
 
   useEffect(() => {
@@ -99,7 +99,7 @@ const enrollmentForm = () => {
             value={date2}
           />
         </div>
-        <button type="button" className="mt-3 form-control fc submit-button" onClick={submitEnrollment}><Link to="/enrolled_classes" className="text-white">Book Now</Link></button>
+        <button type="button" className="mt-3 form-control fc submit-button" onClick={submitEnrollment}><Link to="/my_classes" className="text-white">Book Now</Link></button>
       </form>
     </div>
   );

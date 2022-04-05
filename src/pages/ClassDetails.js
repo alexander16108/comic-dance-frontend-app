@@ -33,18 +33,18 @@ const MyClassDetails = () => {
           <div className=" card mb-3 mt-5">
             <div className="row g-0">
               <div className="col-md-5">
-                <img src={enroll.classDetails.image} className="h-100 img-fluid rounded-start" alt="..." />
+                <img src={classDetail.classDetails.image} className="h-100 img-fluid rounded-start" alt="..." />
                 {' '}
 
               </div>
               <div className="col-md-7">
                 <div className="card-body">
                   <h3 className="card-title text-info text-center">
-                    {enroll.classDetails.name}
+                    {classDetail.classDetails.name}
                   </h3>
                   <p className="text-center">
                     {' '}
-                    {enroll.classDetails.description}
+                    {classDetail.classDetails.description}
                     {' '}
                   </p>
                   <table className="table">
@@ -54,7 +54,7 @@ const MyClassDetails = () => {
                         <td>City</td>
                         <td> - </td>
                         <td />
-                        <td>{enroll.classDetails.city}</td>
+                        <td>{classDetail.classDetails.city}</td>
                       </tr>
                       <tr>
                         <td />
@@ -64,7 +64,7 @@ const MyClassDetails = () => {
                         <td />
                         <td>
                           $
-                          {enroll.enrollDetails.monthly_fees}
+                          {classDetail.classDetails.monthly_fees}
                         </td>
                       </tr>
                       <tr>
@@ -72,7 +72,7 @@ const MyClassDetails = () => {
                         <td>Expiry Date</td>
                         <td> - </td>
                         <td />
-                        <td>{enroll.classDetails.reservation_expiry_date}</td>
+                        <td>{classDetail.classDetails.reservation_expiry_date}</td>
                       </tr>
                     </tbody>
                   </table>
