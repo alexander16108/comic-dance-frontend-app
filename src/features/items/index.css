@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
 * {
   text-decoration: none;
   list-style-type: none;
 }
 
 section {
-  max-height: 100vh;
+  max-height: 80vh;
 }
 
 .items {
@@ -16,9 +18,10 @@ section {
   text-align: left;
   padding-left: 20px;
   font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  color: rgb(99, 36, 180);
+  font-weight: 500;
+  font-size: 45px;
+  color: rgb(120, 120, 226);
+  font-family: 'Cookie', cursive;
 }
 
 .align {
@@ -78,9 +81,14 @@ section {
 }
 
 .btn {
-  padding: 10px;
+  padding: 15px;
   border-radius: 50px;
   border: none;
   background-color: rgb(120, 120, 226);
   color: white;
+}
+
+span {
+  font-size: larger;
+  font-weight: 700;
 }
