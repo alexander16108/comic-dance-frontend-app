@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { setSingInApi } from './reducer';
+import './index.css';
 
 const Session = () => {
   const navigate = useNavigate();
@@ -28,47 +29,58 @@ const Session = () => {
   };
 
   return (
-    <div>
-      <h1>Sign In</h1>
+    <form className="signup-page">
+      <h1 className="formHeader">Sign In</h1>
       <div>
         {message.map((v) => (<p key={v}>{v}</p>))}
       </div>
-      <form>
-        <div>
-          <input
-            type="email"
-            name="email"
-            value={state.email}
-            onChange={handleInput}
-            placeholder="Email"
-            required
-          />
-        </div>
+      <div className="formGroup">
+        <input
+          className="formControl"
+          type="email"
+          name="email"
+          value={state.email}
+          onChange={handleInput}
+          placeholder="Email"
+          required
+        />
+      </div>
 
-        <div>
-          <input
-            type="password"
-            name="password"
-            value={state.password}
-            onChange={handleInput}
-            placeholder="Password"
-            required
-            minLength={5}
-            maxLength={50}
-          />
-        </div>
+      <div className="formGroup">
+        <input
+          className="formControl"
+          type="password"
+          name="password"
+          value={state.password}
+          onChange={handleInput}
+          placeholder="Password"
+          required
+          minLength={5}
+          maxLength={50}
+        />
+      </div>
 
-        <div>
+      <div className="formGroup">
+        <button
+          className="btn"
+          type="submit"
+          onClick={handleSubmit}
+        >
+          Submit
+        </button>
+      </div>
+      <div className="formGroup">
+        <Link to="/sign_up">
           <button
+            className="btn"
             type="submit"
             onClick={handleSubmit}
           >
-            Submit
+            Sign Up
           </button>
-        </div>
-      </form>
-      <Link to="/sign_up">Sign Up</Link>
-    </div>
+        </Link>
+      </div>
+    </form>
   );
 };
 
