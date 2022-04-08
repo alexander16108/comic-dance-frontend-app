@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 const BASE_URL = 'https://comic-dance-club.herokuapp.com';
-// const BASE_URL = 'https://comic-dance-club.herokuapp.com';
 
 export const authApi = (endPoint = 'users', payload = {}) => axios
   .post(`${BASE_URL}/${endPoint}`, {
