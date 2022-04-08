@@ -1,6 +1,14 @@
 # Comic Dance Hall
 This is an Dance hall webapp that allows a user to sign up, log in, and make leases on particular apartments. The user, apartments, and leases are stored in this API.
 
+[kanban board](https://github.com/alexander16108/comic-dance-frontend-app/projects/1)
+-------------------------
+![kanban board before](https://user-images.githubusercontent.com/60612329/160345329-abd16358-38cc-403a-9b5c-47877230242a.png)
+![kanban board after]()
+
+### [Api-docs](https://comic-dance-club.herokuapp.com/api-docs/index.html)
+### [Live demo](https://comic-dance-club.herokuapp.com)
+
 
 ## Built with
 
@@ -15,7 +23,8 @@ This is an Dance hall webapp that allows a user to sign up, log in, and make lea
 
 ## Previews
 
-
+### [Api-docs](https://comic-dance-club.herokuapp.com/api-docs/index.html)
+### [Live demo](https://comic-dance-club.herokuapp.com)
 
 
 ## Live Demo
@@ -68,9 +77,10 @@ Feel free to check the [issues page](https://github.com/alexander16108/comic-dan
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-- Original design idea by [Gregoire Vella](https://www.behance.net/muratk) on Behance.
-- Microverse
-- The Odin Project
+
+- To [Murat Korkmaz](https://www.behance.net/muratk) for the provided design.
+- To my coding partner who helped me through all the work
+- To my Stand Up Team who kept my morale up!
 
 ## 📝 MIT License
 
