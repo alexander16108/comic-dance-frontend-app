@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
-
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .nav-brand {
   text-decoration: none;
   color:rgb(120, 120, 226);

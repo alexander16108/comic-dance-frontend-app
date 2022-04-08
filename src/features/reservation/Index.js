@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { loadReservations } from './reducer';
+import './index.css';
 
 const Reservations = () => {
   const navigate = useNavigate();
@@ -18,15 +19,25 @@ const Reservations = () => {
   }, []);
 
   return (
-    <div>
-      <h1>My reservations</h1>
-      <ul>
+    <div className="reservations">
+      <h1 className="reservations-header">My reservations</h1>
+      <ul className="reservations-container">
         {
           role && reservations.map((v) => (
-            <li key={v.id}>
-              <p>{v.date}</p>
-              <p>{v.city}</p>
-              <p>{v.item.name}</p>
+            <li className="align" key={v.id}>
+              <p>
+                <span>Reservation Date :</span>
+                {v.date}
+              </p>
+              <p>
+                <span> City:</span>
+                {' '}
+                {v.city}
+              </p>
+              <p>
+                <span>Dance Name: </span>
+                {v.item.name}
+              </p>
             </li>
           ))
         }

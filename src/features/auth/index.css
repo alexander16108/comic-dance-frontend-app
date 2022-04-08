@@ -43,6 +43,7 @@
   font-size: 2rem;
   font-weight: 900;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 @media all and (min-width: 750px) {
