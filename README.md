@@ -6,9 +6,6 @@ This is an Dance hall webapp that allows a user to sign up, log in, and make lea
 ![kanban board before](https://user-images.githubusercontent.com/60612329/160345329-abd16358-38cc-403a-9b5c-47877230242a.png)
 ![kanban board after]()
 
-### [Api-docs](https://comic-dance-club.herokuapp.com/api-docs/index.html)
-### [Live demo](https://comic-dance-club.herokuapp.com)
-
 
 ## Built with
 
@@ -24,10 +21,7 @@ This is an Dance hall webapp that allows a user to sign up, log in, and make lea
 ## Previews
 
 ### [Api-docs](https://comic-dance-club.herokuapp.com/api-docs/index.html)
-### [Live demo](https://comic-dance-club.herokuapp.com)
-
-
-## Live Demo
+### [Live demo](https://comic-dance-hull.herokuapp.com)
 
 
 ## Getting Started
