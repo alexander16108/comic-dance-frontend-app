@@ -1,0 +1,7 @@
+.align-right {
+  list-style-type: none;
+}
+
+.align-right > p {
+  text-align: center;
+}
