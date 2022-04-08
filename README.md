@@ -4,7 +4,8 @@ This is an Dance hall webapp that allows a user to sign up, log in, and make lea
 [kanban board](https://github.com/alexander16108/comic-dance-frontend-app/projects/1)
 -------------------------
 ![kanban board before](https://user-images.githubusercontent.com/60612329/160345329-abd16358-38cc-403a-9b5c-47877230242a.png)
-![kanban board after]()
+[final_kamban](https://user-images.githubusercontent.com/67757001/162409008-a1736fc8-0e09-4d9c-9fc4-d15cd211d63d.PNG)
+
 
 ### [Api-docs](https://comic-dance-club.herokuapp.com/api-docs/index.html)
 ### [Live demo](https://comic-dance-club.herokuapp.com)
