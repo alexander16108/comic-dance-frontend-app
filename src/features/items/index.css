@@ -6,7 +6,7 @@
 }
 
 section {
-  max-height: 100vh;
+  max-height: 80vh;
 }
 
 .items {
@@ -19,7 +19,7 @@ section {
   padding-left: 20px;
   font-style: normal;
   font-weight: 500;
-  font-size: 50px;
+  font-size: 45px;
   color:rgb(120, 120, 226);
   font-family: 'Cookie', cursive;
 }
