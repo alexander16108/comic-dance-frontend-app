@@ -1,6 +1,6 @@
 * {
-text-decoration: none;
-list-style-type: none;
+  text-decoration: none;
+  list-style-type: none;
 }
 
 section {
@@ -12,7 +12,7 @@ section {
 }
 
 .items-header,
-.details-header{
+.details-header {
   text-align: left;
   padding-left: 20px;
   font-family: 'Poppins';
@@ -32,7 +32,7 @@ section {
   max-height: 60vh;
 }
 
-.align > p {
+.align>p {
   text-align: center;
   background-color: rgb(120, 120, 226);
   padding: 10px;
@@ -42,10 +42,10 @@ section {
 
 .items-container {
   display: grid;
- grid-template-columns: 1fr 1fr 1fr;
- overflow-y: scroll;
- overflow-x: hidden;
- max-height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 100vh;
 }
 
 .items-images {
@@ -84,5 +84,4 @@ section {
   border: none;
   background-color: rgb(120, 120, 226);
   color: white;
-  text-align: ;
 }
