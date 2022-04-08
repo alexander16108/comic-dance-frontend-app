@@ -11,7 +11,8 @@ section {
   height: 100vh;
 }
 
-.items-header{
+.items-header,
+.details-header{
   text-align: left;
   padding-left: 20px;
   font-family: 'Poppins';
@@ -28,6 +29,7 @@ section {
   padding: 15px;
   margin: 10px;
   background-color: rgb(228, 220, 220);
+  max-height: 60vh;
 }
 
 .align > p {
@@ -43,6 +45,7 @@ section {
  grid-template-columns: 1fr 1fr 1fr;
  overflow-y: scroll;
  overflow-x: hidden;
+ max-height: 100vh;
 }
 
 .items-images {
@@ -50,3 +53,36 @@ section {
   border-radius: 50px;
 }
 
+.details-images {
+  height: 400px;
+  width: 500px;
+}
+
+.items-images:hover {
+  height: 290px;
+}
+
+.align-details {
+  width: 100%;
+  min-height: 100vh;
+  border-radius: 60px 60px 0 0;
+  padding-top: 0;
+}
+
+.details-container {
+  display: flex;
+}
+
+.details-texts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  background-color: rgb(120, 120, 226);
+  color: white;
+  text-align: ;
+}

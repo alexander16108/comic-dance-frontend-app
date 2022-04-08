@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import NewReservation from '../reservation/New';
-import { deleteItem } from './reducer';
+import './index.css';
 
 const Details = () => {
-  const dispatch = useDispatch();
   const [state, setState] = useState({});
-  const navigate = useNavigate();
   const items = useSelector((state) => state.itemsReducer.items);
   const [reserve, setReserve] = useState(false);
   const { itemId } = useParams();
@@ -16,43 +14,64 @@ const Details = () => {
     setState(item[0]);
   });
 
-  const handleDelte = (event) => {
-    event.preventDefault();
-    dispatch(deleteItem(state.id));
-    navigate('/', { replace: true });
-  };
-
   const handleReserve = () => {
     setReserve(true);
   };
 
   return (
-    <div>
-      <h1>Details Page</h1>
-      <div>
+    <div className="align align-details">
+      <h1 className="details-header">Details Page</h1>
+      <div className="details-container">
 
         <div>
-          <img src={state.picture} alt={state.description} />
+          <img className="details-images" src={state.picture} alt={state.description} />
         </div>
+        <div className="details-texts">
+          <p>
+            {' '}
+            <span>Dance Name:</span>
+            {' '}
+            {state.name}
+          </p>
+          <p>
+            {' '}
+            <span>Dance Description:</span>
+            {' '}
+            {state.description}
+          </p>
+          <p>
+            {' '}
+            <span>Class Fees:</span>
+            {' '}
+            {state.finance}
+          </p>
+          <p>
+            {' '}
+            <span>Total Fees:</span>
+            {' '}
+            {state.total}
 
-        <p>{state.name}</p>
-        <p>{state.description}</p>
-        <p>{state.finance}</p>
-        <p>{state.option}</p>
-        <p>{state.total}</p>
-        <p>{state.duration}</p>
-        <p>{state.apr}</p>
+          </p>
+          <p>
+            {' '}
+            <span>Class Duration:</span>
+            {' '}
+            {state.duration}
+
+          </p>
+          <p>
+            {' '}
+            <span>Apr value:</span>
+            {' '}
+            {state.apr}
+
+          </p>
+          <div>
+            {reserve && <NewReservation itemId={state.id} />}
+            {!reserve && <button className="btn" type="button" onClick={handleReserve}>Reserve</button>}
+          </div>
+        </div>
       </div>
-
-      <div>
-        {reserve && <NewReservation itemId={state.id} />}
-        {!reserve && <button type="button" onClick={handleReserve}>Reserve</button>}
-      </div>
-
-      <div>
-        <button type="button" onClick={handleDelte}>Delete</button>
-      </div>
-
     </div>
   );
 };
