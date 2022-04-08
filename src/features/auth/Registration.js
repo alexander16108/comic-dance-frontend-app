@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { setSingUpApi } from './reducer';
+import './index.css';
 
 const Registration = () => {
   const dispatch = useDispatch();
@@ -36,72 +37,84 @@ const Registration = () => {
   };
 
   return (
-    <div>
-      <h1>Sign Up</h1>
+    <form className="signup-page">
+      <h1 className="formHeader">Sign Up</h1>
       <div>
         {message.map((v) => (<p key={v}>{v}</p>))}
       </div>
-      <form>
-        <div>
-          <input
-            type="text"
-            name="name"
-            value={state.name}
-            onChange={handleInput}
-            placeholder="Name"
-            required
-          />
-        </div>
+      <div className="formGroup">
+        <input
+          className="formControl"
+          type="text"
+          name="name"
+          value={state.name}
+          onChange={handleInput}
+          placeholder="Name"
+          required
+        />
+      </div>
 
-        <div>
-          <input
-            type="email"
-            name="email"
-            value={state.email}
-            onChange={handleInput}
-            placeholder="Email"
-            required
-          />
-        </div>
+      <div className="formGroup">
+        <input
+          className="formControl"
+          type="email"
+          name="email"
+          value={state.email}
+          onChange={handleInput}
+          placeholder="Email"
+          required
+        />
+      </div>
 
-        <div>
-          <input
-            type="password"
-            name="password"
-            value={state.password}
-            onChange={handleInput}
-            placeholder="Password"
-            required
-            minLength={5}
-            maxLength={50}
-          />
-        </div>
+      <div className="formGroup">
+        <input
+          className="formControl"
+          type="password"
+          name="password"
+          value={state.password}
+          onChange={handleInput}
+          placeholder="Password"
+          required
+          minLength={5}
+          maxLength={50}
+        />
+      </div>
 
-        <div>
-          <input
-            placeholder="Confirmation Password"
-            type="password"
-            name="confirmation_password"
-            value={state.confirmation_password}
-            onChange={handleInput}
-            required
-            minLength={5}
-            maxLength={50}
-          />
-        </div>
+      <div className="formGroup">
+        <input
+          className="formControl"
+          placeholder="Confirmation Password"
+          type="password"
+          name="confirmation_password"
+          value={state.confirmation_password}
+          onChange={handleInput}
+          required
+          minLength={5}
+          maxLength={50}
+        />
+      </div>
 
-        <div>
+      <div className="formGroup">
+        <button
+          className="btn"
+          type="submit"
+          onClick={handleSubmit}
+        >
+          Submit
+        </button>
+      </div>
+      <div className="formGroup">
+        <Link to="/sign_in">
           <button
+            className="btn"
             type="submit"
-            onClick={handleSubmit}
           >
-            Submit
+            Sign In
           </button>
-        </div>
 
-      </form>
-      <Link to="/sign_in">Sing In</Link>
-    </div>
+        </Link>
+      </div>
+    </form>
   );
 };
 

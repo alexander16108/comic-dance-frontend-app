@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
 * {
   text-decoration: none;
   list-style-type: none;
@@ -16,9 +18,10 @@ section {
   text-align: left;
   padding-left: 20px;
   font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  color: rgb(99, 36, 180);
+  font-weight: 500;
+  font-size: 50px;
+  color:rgb(120, 120, 226);
+  font-family: 'Cookie', cursive;
 }
 
 .align {

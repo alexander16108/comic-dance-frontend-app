@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
 
 .row {
   display: flex;
@@ -8,11 +9,14 @@
 
 .nav-brand {
   text-decoration: none;
+  color:rgb(120, 120, 226);
+  font-size: 60px;
+  font-family: 'Cookie', cursive;
 }
 
 .navBar {
   padding: 0 10px;
-  max-width: 270px;
+  min-width: 270px;
   height: 100vh;
   background-color: rgb(228, 220, 220);
 }
