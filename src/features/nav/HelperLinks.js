@@ -8,8 +8,7 @@ function HelperLinks({ name, path, role }) {
       || path === '/sign_out'
       || path === '/items/new'
       || path === '/items/:itemId'
-      || path === '/reservations'
-      || path === '/delete')
+      || path === '/reservations')
   ) {
     return null;
   }
@@ -18,8 +17,7 @@ function HelperLinks({ name, path, role }) {
     && (path === '/items/new'
       || path === '/sign_up'
       || path === '/sign_in'
-      || path === '/items/:itemId'
-      || path === '/delete')
+      || path === '/items/:itemId')
   ) {
     return undefined;
   }
@@ -27,8 +25,7 @@ function HelperLinks({ name, path, role }) {
   if (role === 'admin'
     && (path === '/sign_up'
       || path === '/sign_in'
-      || path === '/items/:itemId'
-      || path === '/delete')
+      || path === '/items/:itemId')
   ) {
     return undefined;
   }

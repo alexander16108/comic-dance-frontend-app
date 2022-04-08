@@ -9,18 +9,17 @@ const NavBar = ({ title, routes }) => {
   const role = useSelector((state) => state.authReducer.role) || '';
   return (
     <nav className="navBar">
-      <ul className="nav-list">
-        <li className="brand">
-          <Link to="/" className="nav-brand">
-            <h1 className="nav-title">{title}</h1>
-          </Link>
-        </li>
+      <Link to="/" className="nav-brand">
+        <h1 className="nav-title">{title}</h1>
+      </Link>
+      <hr />
+      <div className="nav-list">
         {routes.map(
           ({ name, path }) => (
             <HelperLinks path={path} name={name} role={role} key={path} />
           ),
         )}
-      </ul>
+      </div>
     </nav>
   );
 };
