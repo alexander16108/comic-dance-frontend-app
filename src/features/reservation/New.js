@@ -33,31 +33,31 @@ const NewReservation = ({ itemId }) => {
   }, []);
 
   return (
-    <div>
-      <h1>New Reservation</h1>
-      <form>
+    <form className="reserve-page">
+      <h1 className="formHeader">New Reservation</h1>
+      <div className="formGroup">
+        <input
+          className="formControl"
+          type="text"
+          name="city"
+          value={state.value}
+          onChange={handleInput}
+          placeholder="City"
+        />
+      </div>
 
-        <div>
-          <input
-            type="text"
-            name="city"
-            value={state.value}
-            onChange={handleInput}
-            placeholder="City"
-          />
-        </div>
+      <div className="formGroup">
+        <input
+          className="formControl"
+          type="date"
+          name="date"
+          value={state.date}
+          onChange={handleInput}
+          placeholder="Date"
+        />
+      </div>
 
-        <div>
-          <input
-            type="date"
-            name="date"
-            value={state.date}
-            onChange={handleInput}
-            placeholder="Date"
-          />
-        </div>
-
-        {!itemId
+      {!itemId
           && (
             <div>
               <select name="item_id" value={state.item_id} onChange={handleInput}>
@@ -68,17 +68,16 @@ const NewReservation = ({ itemId }) => {
             </div>
           )}
 
-        <div>
-          <button
-            type="submit"
-            onClick={handleSubmit}
-          >
-            Submit
-          </button>
-        </div>
-
-      </form>
-    </div>
+      <div className="formGroup">
+        <button
+          className="btn"
+          type="submit"
+          onClick={handleSubmit}
+        >
+          Submit
+        </button>
+      </div>
+    </form>
   );
 };
 
