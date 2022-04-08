@@ -1,7 +1,6 @@
 import DestroySession from '../features/auth/DestroySession';
 import Registration from '../features/auth/Registration';
 import Session from '../features/auth/Session';
-import DestroyItems from '../features/items/Destroy';
 import Items from '../features/items/Index';
 import NewItem from '../features/items/New';
 import Details from '../features/items/Show';
@@ -33,11 +32,6 @@ const routes = [
     name: 'New Reservations',
     path: '/reservations/new',
     component: <NewReservation itemId={0} />,
-  },
-  {
-    name: 'Delete Item',
-    path: '/delete',
-    component: <DestroyItems />,
   },
   {
     name: 'Sing In',
