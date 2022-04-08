@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:3000/api/reservations';
+const BASE_URL = 'https://comic-dance-club.herokuapp.com/api/reservations';
 
 export const loadReservations = async () => {
   const token = JSON.parse(localStorage.getItem('token'));

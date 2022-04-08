@@ -7,7 +7,7 @@ import routes from './routes';
 function App() {
   return (
     <Router basename={process.env.PUBLIC_URL}>
-      <div className="app">
+      <div className="App">
         <NavBar title="Comic Dance Club" routes={routes} />
         <Routes>
           {routes.map(

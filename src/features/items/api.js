@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:3000/api/dances';
+const BASE_URL = 'https://comic-dance-club.herokuapp.com/api/dances';
 
 export const fetchItems = async () => {
   const response = await axios.get(BASE_URL);

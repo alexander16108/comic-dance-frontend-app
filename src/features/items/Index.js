@@ -15,7 +15,7 @@ const Items = () => {
     <ul>
       <h1>Items</h1>
       {items.map((v) => (
-        <li key={v.id}>
+        <li className="align-right" key={v.id}>
           <div>
             <Link to={`/items/${v.id}`}>
               <img src={v.picture} alt={v.description} />
